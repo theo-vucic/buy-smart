@@ -1,8 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-page-component',
@@ -11,8 +8,11 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './page-component.component.html',
   styleUrl: './page-component.component.scss',
 })
-export class PageComponentComponent {
+export class PageComponentComponent implements OnInit {
   isShown = true;
+  ngOnInit(): void {
+    this.isShown = false;
+  }
   ListA = [
     {
       name: 'Item1',

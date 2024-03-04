@@ -1,8 +1,8 @@
 <h1>test</h1>
 <button>click here</button>
-<div>
+<div *ngIf="isShown">
   <ul>
-    <li *ngFor="let book of ListA" ngif>
+    <li *ngFor="let book of ListA">
       <span>{{ book.name }}</span>
     </li>
   </ul>
