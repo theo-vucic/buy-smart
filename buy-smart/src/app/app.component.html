@@ -1,14 +1,35 @@
-<header>
-  <div class="top">
-    <img src="./assets/img/bs-logo.png" />
-    <h1>Buys Smart</h1>
-    <button>Home</button>
-    <button>My List</button>
-    <button>Auctions</button>
-    <button>My Page</button>
-    <button>Example page</button>
-  </div>
-</header>
+<mat-grid-list cols="1">
+  <mat-grid-tile>
+    <mat-grid-tile-header>
+      <div class="label">Buy Smart</div>
+      <div class="button-row">
+        <button mat-button style="color: white">Home</button>
+      </div>
+
+      <div class="label">
+        <mat-form-field>
+          <input
+            matInput
+            [type]="'text'"
+            #inputField
+            placeholder="Chercher sur Buy Smart"
+            (input)="handleSearchInput(inputField)"
+          />
+          <button mat-icon-button matSuffix (click)="search(inputField)">
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="button-row">
+        <button mat-button style="color: white">My List</button>
+        <button mat-button style="color: white">Auctions</button>
+        <button mat-button style="color: white">My Page</button>
+        <button mat-button style="color: white">Exemple page</button>
+      </div>
+    </mat-grid-tile-header>
+  </mat-grid-tile>
+</mat-grid-list>
 <router-outlet></router-outlet>
 <footer>
   <h1>Buy smart associates</h1>

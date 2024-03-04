@@ -1,25 +1,53 @@
-.top {
-  display: flex;
-  width: 100%;
-  height: 10%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: left;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: #8b008b;
-}
 footer {
   position: absolute;
   bottom: 0;
   height: 10%;
   width: 100%;
   left: 0;
-  background-color: #8b008b;
+  background-color: #252840;
   position: fixed;
 }
-button {
-  height: 100%;
-  width: 10%;
-  font-size: 20px;
+
+.mat-grid-tile-header {
+  background-color: #252840 !important;
+  height: 15%;
+}
+
+section {
+  display: table;
+}
+
+.label {
+  font-size: 22px !important;
+  margin-left: 6px;
+  min-width: 10%;
+  font-family: "Jumble", sans-serif;
+}
+
+.button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+}
+
+@font-face {
+  font-family: "Jumble";
+  src: url("/assets/fonts/Jumble.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
