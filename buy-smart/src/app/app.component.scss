@@ -1,5 +1,5 @@
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 10%;
   width: 100%;
@@ -64,6 +64,10 @@ section {
   width: 15%;
 }
 
+.clear {
+  clear: both;
+  height: 11%;
+}
 @font-face {
   font-family: "Jumble";
   src: url("/assets/fonts/Jumble.otf") format("opentype");
