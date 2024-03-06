@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-page-component',
+  selector: 'app-my-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './page-component.component.html',
-  styleUrl: './page-component.component.scss',
+  templateUrl: './my-list.component.html',
+  styleUrl: './my-list.component.scss',
 })
-export class PageComponentComponent implements OnInit {
+export class MyListComponent implements OnInit {
   isShown = true;
   ngOnInit(): void {
     this.isShown = false;

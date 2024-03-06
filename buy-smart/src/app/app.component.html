@@ -1,9 +1,9 @@
-<mat-grid-list cols="1">
+<mat-grid-list cols="1" rowHeight="60px">
   <mat-grid-tile>
     <mat-grid-tile-header>
       <div class="label">Buy Smart</div>
       <div class="button-row">
-        <button mat-button style="color: white">Home</button>
+        <a [routerLink]="['']" style="color: white"> Home</a>
       </div>
 
       <div class="label">
@@ -22,15 +22,19 @@
       </div>
 
       <div class="button-row">
-        <button mat-button style="color: white">My List</button>
-        <button mat-button style="color: white">Auctions</button>
-        <button mat-button style="color: white">My Page</button>
-        <button mat-button style="color: white">Exemple page</button>
+        <a [routerLink]="['/my-list']" style="color: white"> My List</a>
+        <a [routerLink]="['/auctions']" style="color: white"> Auctions</a>
+        <a [routerLink]="['/my-page']" style="color: white"> My Page</a>
+        <a [routerLink]="['/example-page']" style="color: white">
+          Example Page</a
+        >
       </div>
     </mat-grid-tile-header>
   </mat-grid-tile>
 </mat-grid-list>
+
 <router-outlet></router-outlet>
+
 <footer>
   <h1>Buy smart associates</h1>
 </footer>

@@ -3,20 +3,39 @@ footer {
   bottom: 0;
   height: 10%;
   width: 100%;
-  left: 0;
   background-color: #252840;
-  position: fixed;
+
+  color: white;
+  font-family: "Jumble", sans-serif;
 }
 
 .mat-grid-tile-header {
   background-color: #252840 !important;
   height: 15%;
 }
+#mat-grid-list {
+  padding: 0;
+}
+a {
+  display: inline;
+  padding: 15px;
+  font-family: "Jumble", sans-serif;
+  font-size: 20px;
+}
+a:link,
+a:visited,
+a:hover,
+A:active {
+  text-decoration: none;
+}
 
 section {
   display: table;
 }
 
+.inputField {
+  text-align: center;
+}
 .label {
   font-size: 22px !important;
   margin-left: 6px;
