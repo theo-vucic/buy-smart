@@ -2,7 +2,11 @@ img {
   height: auto;
   width: 20%;
 }
-mat-card-header {
+mat-card {
   border-color: black;
   border-radius: 10px;
+  background-color: gray;
+  width: 80%;
+  height: auto;
+  text-align: center;
 }
