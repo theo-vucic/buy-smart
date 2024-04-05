@@ -9,6 +9,9 @@ footer {
   font-family: "Jumble", sans-serif;
 }
 
+mat-grid-tile {
+  position: fixed;
+}
 .mat-grid-tile-header {
   background-color: #252840 !important;
   height: 15%;
@@ -48,6 +51,9 @@ section {
   max-width: 600px;
 }
 
+mat-form-field {
+  padding: 20px;
+}
 .button-row .mat-mdc-button-base {
   margin: 8px 8px 8px 0;
 }
