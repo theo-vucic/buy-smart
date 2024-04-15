@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "Nom": "SSD",
+    "Description": "SSD PNY en bon état",
+    "Categorie": "Informatique",
+    "Prix": 30
+  },
+  {
+    "id": 2,
+    "Nom": "Téléphone",
+    "Description": "Vieux Téléphone Xperia",
+    "Categorie": "Informatique",
+    "Prix": 10
+  },
+  {
+    "id": 3,
+    "Nom": "Vélo de montagne",
+    "Description": "Vélo tout terrain en excellent état",
+    "Categorie": "Sport et Loisirs",
+    "Prix": 300
+  },
+  {
+    "id": 4,
+    "Nom": "iPhone X",
+    "Description": "iPhone X en parfait état, débloqué tous opérateurs",
+    "Categorie": "Électronique",
+    "Prix": 500
+  },
+  {
+    "id": 5,
+    "Nom": "Canapé convertible",
+    "Description": "Canapé gris en bon état, convertible en lit",
+    "Categorie": "Maison et Jardin",
+    "Prix": 250
+  },
+  {
+    "id": 6,
+    "Nom": "Livre : Le Seigneur des Anneaux",
+    "Description": "Trilogie complète en édition de luxe",
+    "Categorie": "Livres et Magazines",
+    "Prix": 50
+  }
+]

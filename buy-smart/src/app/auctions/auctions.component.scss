@@ -1,0 +1,29 @@
+img {
+  height: auto;
+  width: 200px;
+}
+mat-card {
+  border-color: black;
+  border-radius: 10px;
+  background-color: gray;
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  #first-img {
+    left: 0;
+    max-width: 20%;
+    background-size: cover;
+  }
+  mat-card-subtitle {
+    text-align: left;
+  }
+  #description {
+    padding: 20px;
+    text-align: center;
+  }
+}

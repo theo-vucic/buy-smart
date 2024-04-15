@@ -4,6 +4,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
+interface Annonce {
+  Nom: string;
+  Description: string;
+  Categorie: string;
+  Prix: number;
+}
 
 @Component({
   selector: 'app-my-list',
@@ -22,5 +28,8 @@ export class MyListComponent implements OnInit {
   isShown = true;
   ngOnInit(): void {
     this.isShown = false;
+    this.getData();
   }
+
+  getData() {}
 }

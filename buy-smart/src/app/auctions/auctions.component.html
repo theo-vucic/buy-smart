@@ -1,1 +1,59 @@
-<p>auctions works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Filtres</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-select placeholder="Trier par">
+        <mat-option value="Prix (croissant)">Prix (croissant)</mat-option>
+        <mat-option value="Pertinence">Pertinence</mat-option>
+        <mat-option value="Les plus récentes">Les plus récentes</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Categorie">
+        <mat-option value="Electronique">Electronique</mat-option>
+        <mat-option value="Loisirs">Loisirs</mat-option>
+        <mat-option value="Maison">Maison</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Categorie">
+        <p>test</p>
+        <mat-option>
+          <mat-slider min="0" max="50">
+            <input value="10" matSliderStartThumb />
+            <input value="20" matSliderEndThumb />
+          </mat-slider>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>header content</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="first_image">
+      <img src="../assets/img/ssd1.jpg" />
+    </div>
+    <mat-card-subtitle>here is the content of the card</mat-card-subtitle>
+    <div class="description">Lorem ipsum this object</div>
+    <div class="time_remaining">{{ time_remaining | date : "h:mm a z" }}</div>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>header content</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-subtitle>here is the content of the card</mat-card-subtitle>
+    <div class="first_image">
+      <img src="../assets/img/ssd1.jpg" />
+    </div>
+    <div class="time_remaining">{{ time_remaining | date : "h:mm a z" }}</div>
+  </mat-card-content>
+</mat-card>

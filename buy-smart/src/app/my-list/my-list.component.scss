@@ -10,14 +10,22 @@ mat-card {
   margin: auto;
   height: auto;
   display: flex;
-
+  justify-content: space-around;
   border-radius: 10px;
   margin-bottom: 10px;
 
+  mat-card-content {
+    flex-direction: column;
+    text-align: center;
+  }
   #first-img {
     left: 0;
     max-width: 20%;
     background-size: cover;
+    align-items: start;
+    padding: 10px;
+    float: left;
+    margin-right: 20px;
   }
   mat-card-subtitle {
     text-align: left;
