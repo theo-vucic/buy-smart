@@ -4,16 +4,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyListService } from './my-list.service';
 import { Router } from '@angular/router';
 import data from '../../assets/data/data.json';
+
 interface Annonce {
-  Id: string;
-  Nom: string;
-  Description: string;
-  Categorie: string;
-  Prix: number;
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  description: string;
+  product_type: string;
+  image_path: string;
 }
 
 @Component({
@@ -33,7 +36,7 @@ interface Annonce {
 export class MyListComponent implements OnInit {
   annonces: Annonce[] = [];
   isShown = true;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private myListService: MyListService) {}
   //public constructor(private ListService: MyListService) {}
   ngOnInit(): void {
     this.isShown = false;
@@ -41,8 +44,14 @@ export class MyListComponent implements OnInit {
     // getAnnonce(): Observable<Annonce[]> {
     //   return this.http.get<Annonce[]>(this.Annonce);
     // }
+    this.showAnnonces();
   }
   moreDetails() {
     this.router.navigate(['details']);
+  }
+  showAnnonces() {
+    this.myListService.getAnnonces().subscribe((response: any) => {
+      this.annonces = response;
+    });
   }
 }

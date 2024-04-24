@@ -13,12 +13,12 @@ interface Annonce {
 @Injectable({
   providedIn: 'root',
 })
-export class MyListService {
+export class DetailsService {
   private baseUrl = '../../assets/data/data.json';
 
   constructor(private http: HttpClient) {}
 
-  getAnnonces(): Observable<Annonce[]> {
-    return this.http.get<Annonce[]>(`http://localhost:3300/products`);
+  getAnnonceById(id: string): Observable<Annonce[]> {
+    return this.http.get<Annonce[]>('http://localhost:3300/products/:' + id);
   }
 }

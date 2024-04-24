@@ -1,14 +1,23 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ title }}</mat-card-title>
+    <h1>Autres</h1>
   </mat-card-header>
   <mat-card-content>
-    <div class="first_image">
-      <img style="padding: 10px" src="../assets/img/ssd1.jpg" />
-      <img style="padding: 10px" src="../assets/img/ssd2.jpg" />
-    </div>
-    <mat-card-subtitle>here is the content of the card</mat-card-subtitle>
-    <div class="description">Lorem ipsum this object</div>
-    <p>test</p>
+    <mat-card *ngFor="let annonce of annonces">
+      <mat-card-content>
+        <div class="major">
+          <p label="id">{{ annonce.id }}</p>
+          <p label="name">{{ annonce.name }}</p>
+          <p label="product_type">{{ annonce.product_type }}</p>
+          <p label="price">{{ annonce.price }}</p>
+        </div>
+        <div class="minor">
+          <p label="quantity">{{ annonce.quantity }}</p>
+          <p label="description">{{ annonce.description }}</p>
+          <p label="product_type">{{ annonce.product_type }}</p>
+          <p label="image_path">{{ annonce.image_path }}</p>
+        </div>
+        <img src="{{ annonce.image_path }}" /> </mat-card-content
+    ></mat-card>
   </mat-card-content>
 </mat-card>
