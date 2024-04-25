@@ -1,0 +1,46 @@
+mat-card {
+  border-color: black;
+  border-radius: 10px;
+  background-color: gray;
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  mat-card-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  #first-img {
+    left: 0;
+    max-width: 20%;
+    background-size: cover;
+    align-items: start;
+    padding: 10px;
+    float: left;
+    margin-right: 20px;
+  }
+}
+img {
+  height: auto;
+  width: 200px;
+}
+
+mat-grid-tile {
+  border-color: black;
+  border-radius: 10px;
+  background-color: gray;
+}
+.update {
+  background-color: lightgreen;
+}
+.delete {
+  background-color: red;
+}
+.clear {
+  clear: both;
+  height: 10%;
+}

@@ -18,10 +18,7 @@ import { MatSliderModule } from '@angular/material/slider';
   templateUrl: './auctions.component.html',
   styleUrl: './auctions.component.scss',
 })
-export class AuctionsComponent implements OnInit, AfterViewInit {
-  ngAfterViewInit(): void {
-    throw new Error('Method not implemented.');
-  }
+export class AuctionsComponent implements OnInit {
   ngOnInit(): void {
     this.triggertime();
   }

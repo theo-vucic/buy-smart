@@ -1,0 +1,47 @@
+img {
+  height: auto;
+  width: 200px;
+}
+mat-card {
+  border-color: black;
+  border-radius: 10px;
+  background-color: gray;
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  focus-visible {
+    outline: none;
+    background-color: #efefef;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  }
+  mat-card-content {
+    flex-direction: column;
+    text-align: center;
+    border-color: #0033cc;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 11px;
+  }
+  #first-img {
+    left: 0;
+    max-width: 20%;
+    background-size: cover;
+    align-items: start;
+    padding: 10px;
+    float: left;
+    margin-right: 20px;
+  }
+  mat-card-subtitle {
+    text-align: left;
+  }
+  #description {
+    padding: 20px;
+    text-align: center;
+  }
+}

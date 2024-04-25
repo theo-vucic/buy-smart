@@ -5,11 +5,13 @@ import { MyPageComponent } from './my-page/my-page.component';
 import { ExamplePageComponent } from './example-page/example-page.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'annonces', component: MyListComponent },
   { path: 'auctions', component: AuctionsComponent },
   { path: 'my-page', component: MyPageComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'example-page', component: ExamplePageComponent },
   { path: 'details', component: DetailsComponent },
 ];

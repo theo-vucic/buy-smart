@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AccountService } from './account.service';
+import { Router } from '@angular/router';
 interface Annonce {
   id: string;
   name: string;
@@ -32,18 +33,24 @@ export class MyPageComponent implements OnInit {
   annonces: Annonce[] = [];
   constructor(
     private accountService: AccountService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      const id = params.get('myParam');
-      console.log(id + 'params', params);
+    if (localStorage.getItem('userid')) {
+      this.route.paramMap.subscribe((params) => {
+        const id = params.get('myParam');
+        console.log(id + 'params', params);
 
-      if (id) {
-        this.accountService.getAnnonceById(id).subscribe((response: any) => {
-          this.annonces = response;
-        });
-      }
-    });
+        if (id) {
+          this.accountService.getAnnonceById(id).subscribe((response: any) => {
+            this.annonces = response;
+          });
+        }
+      });
+    } else {
+      console.log();
+      this.router.navigate(['login']);
+    }
   }
 }

@@ -13,10 +13,12 @@ interface Annonce {
 @Injectable({
   providedIn: 'root',
 })
-export class AccountService {
+export class HomeService {
+  private baseUrl = '../../assets/data/data.json';
+
   constructor(private http: HttpClient) {}
 
-  getAnnonceById(id: string): Observable<Annonce[]> {
-    return this.http.get<Annonce[]>('http://localhost:3300/products/' + id);
+  getAnnonces(): Observable<Annonce[]> {
+    return this.http.get<Annonce[]>(`http://localhost:3300/products`);
   }
 }
