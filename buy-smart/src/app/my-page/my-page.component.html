@@ -1,1 +1,31 @@
-<p>my-page works!</p>
+<mat-card>
+  <mat-card-header>
+    <h1>Autres</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card *ngFor="let annonce of annonces">
+      <mat-card-content>
+        <div class="major">
+          <h1 label="name">{{ annonce.name }}</h1>
+          <p na="product_type">Categorie: {{ annonce.product_type }}</p>
+          <h2 label="price">prix: {{ annonce.price }}</h2>
+        </div>
+        <div class="minor">
+          <p label="quantity">Quantité: {{ annonce.quantity }}</p>
+          <p label="description">Description :{{ annonce.description }}</p>
+          <img
+            src="http://localhost:3300/{{
+              annonce.image_path.replace('\'', '/')
+            }}"
+          /></div></mat-card-content
+    ></mat-card>
+  </mat-card-content>
+  <mat-grid-list cols="2" rowHeight="4rem">
+    <mat-grid-tile class="update"
+      ><button mat-button color="primary">Update Product</button></mat-grid-tile
+    >
+    <mat-grid-tile class="delete"
+      ><button mat-button color="primary">Delete Product</button></mat-grid-tile
+    >
+  </mat-grid-list>
+</mat-card>

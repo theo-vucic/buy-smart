@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { DetailsService } from './details.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 interface Annonce {
   id: string;
   name: string;
@@ -15,7 +18,13 @@ interface Annonce {
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+  ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
 })

@@ -4,8 +4,10 @@ import { AuctionsComponent } from './auctions/auctions.component';
 import { MyPageComponent } from './my-page/my-page.component';
 import { ExamplePageComponent } from './example-page/example-page.component';
 import { DetailsComponent } from './details/details.component';
+import { HomeComponent } from './home/home.component';
 export const routes: Routes = [
-  { path: 'my-list', component: MyListComponent },
+  { path: '', component: HomeComponent },
+  { path: 'annonces', component: MyListComponent },
   { path: 'auctions', component: AuctionsComponent },
   { path: 'my-page', component: MyPageComponent },
   { path: 'example-page', component: ExamplePageComponent },

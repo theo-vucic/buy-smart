@@ -7,20 +7,25 @@
       <mat-card-content>
         <div class="major">
           <h1 label="name">{{ annonce.name }}</h1>
-          <p label="product_type">{{ annonce.product_type }}</p>
-          <p label="price">{{ annonce.price }}</p>
+          <p na="product_type">Categorie: {{ annonce.product_type }}</p>
+          <h2 label="price">prix: {{ annonce.price }}</h2>
         </div>
         <div class="minor">
-          <p label="quantity">{{ annonce.quantity }}</p>
-          <p label="description">{{ annonce.description }}</p>
-          <p label="product_type">{{ annonce.product_type }}</p>
-          <p label="image_path">{{ annonce.image_path }}</p>
-        </div>
-        <img
-          src="http://localhost:3300/{{
-            annonce.image_path.replace('\'', '/')
-          }}"
-        /> </mat-card-content
+          <p label="quantity">Quantité: {{ annonce.quantity }}</p>
+          <p label="description">Description :{{ annonce.description }}</p>
+          <img
+            src="http://localhost:3300/{{
+              annonce.image_path.replace('\'', '/')
+            }}"
+          /></div></mat-card-content
     ></mat-card>
   </mat-card-content>
+  <mat-grid-list cols="2" rowHeight="4rem">
+    <mat-grid-tile class="update"
+      ><button mat-button color="primary">Update Product</button></mat-grid-tile
+    >
+    <mat-grid-tile class="delete"
+      ><button mat-button color="primary">Delete Product</button></mat-grid-tile
+    >
+  </mat-grid-list>
 </mat-card>
