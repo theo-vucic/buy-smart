@@ -10,11 +10,6 @@ footer {
   font-family: "Jumble", sans-serif;
 }
 
-header {
-  z-index: 1;
-  position: fixed;
-}
-
 mat-grid-tile {
   position: fixed;
   min-height: 50vh;
@@ -45,8 +40,8 @@ section {
 
 .inputField {
   text-align: center;
-  margin-top: 10% !important;
 }
+
 .label {
   font-size: 22px !important;
   margin-left: 6px;
@@ -60,6 +55,7 @@ section {
 }
 
 mat-form-field {
+  padding: 20px;
   justify-content: space-between;
   margin: 8px 8px 8px 0;
 }
