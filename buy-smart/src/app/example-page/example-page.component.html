@@ -1,1 +1,46 @@
-<p>example-page works!</p>
+<mat-card-header>
+  <h1>Panier</h1>
+</mat-card-header>
+<div class="container">
+  <ng-container *ngFor="let productGroup of products">
+    <mat-card *ngFor="let annonce of productGroup">
+      <mat-card-content>
+        <div class="product-container">
+          <div class="image-column">
+            <img src="http://localhost:3300/{{ annonce.image_path }}" />
+          </div>
+          <div class="text-column">
+            <div class="major">
+              <h1 label="name">{{ annonce.name }}</h1>
+              <p na="product_type">Categorie: {{ annonce.product_type }}</p>
+              <h2 label="price">Prix: {{ annonce.price }}€</h2>
+            </div>
+            <div class="minor">
+              <p label="description">Description: {{ annonce.description }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+
+  <mat-card class="total-card">
+    <mat-card-content>
+      <h2>Paiement</h2>
+      <p>Total : {{ getTotal() }}€</p>
+      <form
+        action=" https://www.paypal.com/webapps/shoppingcart "
+        method="post"
+      >
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          class="paypal-button"
+        >
+          Confirmer
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

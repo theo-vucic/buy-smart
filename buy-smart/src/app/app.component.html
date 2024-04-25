@@ -1,39 +1,38 @@
-<mat-grid-list cols="1" rowHeight="60px">
-  <div class="clear"></div>
-  <mat-grid-tile>
-    <mat-grid-tile-header>
-      <div class="label">Buy Smart</div>
-      <div class="button-row">
-        <a [routerLink]="['']" style="color: white"> Home</a>
-      </div>
+<header>
+  <mat-grid-list cols="1" rowHeight="60px">
+    <div class="clear"></div>
+    <mat-grid-tile>
+      <mat-grid-tile-header>
+        <div class="label">Buy Smart</div>
+        <div class="button-row">
+          <a [routerLink]="['']" style="color: white"> Home</a>
+        </div>
 
-      <div class="label">
-        <mat-form-field>
-          <input
-            matInput
-            [type]="'text'"
-            #inputField
-            placeholder="Chercher sur Buy Smart"
-            (input)="handleSearchInput(inputField)"
-          />
-          <button mat-icon-button matSuffix (click)="search(inputField)">
-            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
-        </mat-form-field>
-      </div>
+        <div class="label">
+          <mat-form-field>
+            <input
+              matInput
+              [type]="'text'"
+              #inputField
+              placeholder="Chercher sur Buy Smart"
+              (input)="handleSearchInput(inputField)"
+            />
+            <button mat-icon-button matSuffix (click)="search(inputField)">
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
 
-      <div class="button-row">
-        <a [routerLink]="['/annonces']" style="color: white"> Annonces</a>
-        <a [routerLink]="['/auctions']" style="color: white"> Enchères</a>
-        <a [routerLink]="['/my-page']" style="color: white"> Mon compte</a>
-        <a [routerLink]="['/example-page']" style="color: white">
-          Example Page</a
-        >
-      </div>
-    </mat-grid-tile-header>
-  </mat-grid-tile>
-</mat-grid-list>
-
+        <div class="button-row">
+          <a [routerLink]="['/annonces']" style="color: white"> Annonces</a>
+          <a [routerLink]="['/auctions']" style="color: white"> Enchères</a>
+          <a [routerLink]="['/my-page']" style="color: white"> Mon compte</a>
+          <a [routerLink]="['/example-page']" style="color: white"> Panier</a>
+        </div>
+      </mat-grid-tile-header>
+    </mat-grid-tile>
+  </mat-grid-list>
+</header>
 <router-outlet></router-outlet>
 <div class="clear"></div>
 <footer>

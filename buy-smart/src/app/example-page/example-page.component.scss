@@ -1,0 +1,51 @@
+img {
+  height: auto;
+  width: 150px;
+}
+mat-card {
+  border-color: black;
+  border-radius: 10px;
+  width: 70%;
+  height: auto;
+  display: flex;
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  #first-img {
+    left: 0;
+    max-width: 20%;
+    background-size: cover;
+  }
+  mat-card-subtitle {
+    text-align: left;
+  }
+  #description {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.image-column {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.text-column {
+  flex: 1 1 auto;
+}
+
+.total-card {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-left: 20px;
+}

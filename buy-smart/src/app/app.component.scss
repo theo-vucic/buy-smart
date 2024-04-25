@@ -1,12 +1,18 @@
 footer {
+  z-index: 1;
   position: fixed;
   bottom: 0;
-  height: 10%;
+  height: 8%;
   width: 100%;
   background-color: #252840;
 
   color: white;
   font-family: "Jumble", sans-serif;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
 }
 
 mat-grid-tile {
@@ -24,7 +30,6 @@ mat-grid-tile {
 a {
   display: inline;
   padding: 15px;
-  font-family: "Jumble", sans-serif;
   font-size: 20px;
 }
 a:link,
@@ -40,6 +45,7 @@ section {
 
 .inputField {
   text-align: center;
+  margin-top: 10% !important;
 }
 .label {
   font-size: 22px !important;
@@ -54,8 +60,10 @@ section {
 }
 
 mat-form-field {
-  padding: 20px;
+  justify-content: space-between;
+  margin: 8px 8px 8px 0;
 }
+
 .button-row .mat-mdc-button-base {
   margin: 8px 8px 8px 0;
 }
