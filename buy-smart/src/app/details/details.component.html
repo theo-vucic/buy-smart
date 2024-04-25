@@ -6,8 +6,7 @@
     <mat-card *ngFor="let annonce of annonces">
       <mat-card-content>
         <div class="major">
-          <p label="id">{{ annonce.id }}</p>
-          <p label="name">{{ annonce.name }}</p>
+          <h1 label="name">{{ annonce.name }}</h1>
           <p label="product_type">{{ annonce.product_type }}</p>
           <p label="price">{{ annonce.price }}</p>
         </div>
@@ -17,7 +16,11 @@
           <p label="product_type">{{ annonce.product_type }}</p>
           <p label="image_path">{{ annonce.image_path }}</p>
         </div>
-        <img src="{{ annonce.image_path }}" /> </mat-card-content
+        <img
+          src="http://localhost:3300/{{
+            annonce.image_path.replace('\'', '/')
+          }}"
+        /> </mat-card-content
     ></mat-card>
   </mat-card-content>
 </mat-card>

@@ -20,15 +20,15 @@ interface Annonce {
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
-  title = 'custom';
   annonces: Annonce[] = [];
   constructor(
     private detailservice: DetailsService,
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    this.route.queryParamMap.subscribe((params) => {
-      const id = params.get('id');
+    this.route.paramMap.subscribe((params) => {
+      const id = params.get('myParam');
+      console.log(id + 'params', params);
 
       if (id) {
         this.detailservice.getAnnonceById(id).subscribe((response: any) => {

@@ -32,7 +32,7 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card (click)="moreDetails()">
+<mat-card>
   <mat-card-header>
     <mat-card-title>header content</mat-card-title>
   </mat-card-header>
@@ -74,11 +74,13 @@
     <h1>Autres</h1>
   </mat-card-header>
   <mat-card-content>
-    <mat-card *ngFor="let annonce of annonces">
+    <mat-card
+      *ngFor="let annonce of annonces"
+      (click)="moreDetails(annonce.id)"
+    >
       <mat-card-content>
         <div class="major">
-          <p label="id">{{ annonce.id }}</p>
-          <p label="name">{{ annonce.name }}</p>
+          <h1 label="name">{{ annonce.name }}</h1>
           <p label="product_type">{{ annonce.product_type }}</p>
           <p label="price">{{ annonce.price }}</p>
         </div>

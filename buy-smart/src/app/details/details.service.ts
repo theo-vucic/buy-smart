@@ -19,6 +19,6 @@ export class DetailsService {
   constructor(private http: HttpClient) {}
 
   getAnnonceById(id: string): Observable<Annonce[]> {
-    return this.http.get<Annonce[]>('http://localhost:3300/products/:' + id);
+    return this.http.get<Annonce[]>('http://localhost:3300/products/' + id);
   }
 }

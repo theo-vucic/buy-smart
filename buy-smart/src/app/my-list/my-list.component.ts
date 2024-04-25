@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyListService } from './my-list.service';
-import { Router } from '@angular/router';
+import { Params, Router } from '@angular/router';
 import data from '../../assets/data/data.json';
 
 interface Annonce {
@@ -46,8 +46,9 @@ export class MyListComponent implements OnInit {
     // }
     this.showAnnonces();
   }
-  moreDetails() {
-    this.router.navigate(['details']);
+  moreDetails(id: string) {
+    const queryParams: Params = { myParam: id };
+    this.router.navigate(['details', queryParams]);
   }
   showAnnonces() {
     this.myListService.getAnnonces().subscribe((response: any) => {
