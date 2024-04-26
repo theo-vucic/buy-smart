@@ -28,4 +28,45 @@
       ><button mat-button color="primary">Delete Product</button></mat-grid-tile
     >
   </mat-grid-list>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="Nom">Nom:</label>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div>
+      <label for="price">price:</label>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div>
+      <label for="quantity">quantity:</label>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div>
+      <label for="Description">Description:</label>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div>
+      <label for="product_type">product type:</label>
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button type="submit" mat-button>Update</button>
+    </div>
+  </form>
 </mat-card>

@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
 interface Annonce {
   id: string;
   name: string;
@@ -24,11 +25,16 @@ interface Annonce {
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
+    MatFormFieldModule,
   ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
+  onSubmit() {
+    throw new Error('Method not implemented.');
+  }
+  hide = true;
   annonces: Annonce[] = [];
   constructor(
     private detailservice: DetailsService,

@@ -5,7 +5,7 @@ img {
 mat-card {
   border-color: black;
   border-radius: 10px;
-  background-color: gray;
+  background-color: #37a5af;
   width: 80%;
   margin: auto;
   height: auto;
@@ -13,7 +13,6 @@ mat-card {
   justify-content: space-around;
   border-radius: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
 
   focus-visible {
     outline: none;
@@ -23,10 +22,18 @@ mat-card {
   mat-card-content {
     flex-direction: column;
     text-align: center;
-    border-color: #0033cc;
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 11px;
+
+    mat-card {
+      mat-card-content {
+        cursor: pointer;
+        flex-direction: column;
+        text-align: center;
+        border-color: #4e9788;
+        border-radius: 6px;
+        border-style: solid;
+        border-width: 11px;
+      }
+    }
   }
   #first-img {
     left: 0;

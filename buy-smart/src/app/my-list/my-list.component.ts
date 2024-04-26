@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MyListService } from './my-list.service';
 import { Params, Router } from '@angular/router';
 
@@ -27,6 +27,7 @@ interface Annonce {
     MatSelectModule,
     MatFormFieldModule,
     MatSliderModule,
+    MatGridListModule,
   ],
   templateUrl: './my-list.component.html',
   styleUrl: './my-list.component.scss',

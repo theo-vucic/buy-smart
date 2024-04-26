@@ -34,7 +34,7 @@
 
 <mat-card>
   <mat-card-header>
-    <h1>Annonces</h1>
+    <h1>Autres</h1>
   </mat-card-header>
   <mat-card-content>
     <mat-card
@@ -43,20 +43,16 @@
     >
       <mat-card-content>
         <div class="major">
-          <h1 label="name">{{ annonce.name }}</h1>
-          <p label="product_type">{{ annonce.product_type }}</p>
-          <p label="price">{{ annonce.price }}</p>
-        </div>
-        <div class="minor">
-          <p label="quantity">{{ annonce.quantity }}</p>
-          <div label="description">{{ annonce.description }}</div>
-          <p label="product_type">{{ annonce.product_type }}</p>
           <img
             src="http://localhost:3300/{{
               annonce.image_path.replace('\'', '/')
             }}"
           />
-        </div> </mat-card-content
-    ></mat-card>
+          <h1 label="name">{{ annonce.name }}</h1>
+          <p label="product_type">{{ annonce.product_type }}</p>
+          <p label="price">{{ annonce.price }}</p>
+        </div>
+      </mat-card-content></mat-card
+    >
   </mat-card-content>
 </mat-card>
